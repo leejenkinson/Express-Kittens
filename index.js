@@ -21,7 +21,7 @@ document.getElementById('kittensForm').addEventListener("submit", function (even
             renderKittens();
         })
         .catch(err => console.error(err));
-    
+
     console.log("KITTEN: ", kitten);
 });
 
@@ -42,15 +42,32 @@ function renderKittens() {
                 const kittenBreed = document.createElement("li");
                 kittenBreed.innerText = "Breed: " + kitten.breed;
                 kittenDiv.appendChild(kittenBreed);
-            
+
                 const kittenCuteness = document.createElement("li");
                 kittenCuteness.innerText = "Cuteness: " + kitten.cuteness;
                 kittenDiv.appendChild(kittenCuteness);
-    
+
+                const kittenDelete = document.createElement("button");
+                kittenDelete.innerText = "You've got to be kitten me?!"
+                kittenDelete.addEventListener("click", function () {
+                    deleteKitten(kitten.id);
+                });
+
+                kittenDiv.appendChild(kittenDelete);
+
                 output.appendChild(kittenDiv);
             }
         })
         .catch(err => console.error(err));
 }
 
-renderKittens();
+function deleteKitten(id) {
+    axios.delete("http://localhost:4494/kitten/remove/" + id)
+    .then(res=> {
+        console.log();
+        renderKittens();
+    })
+    .catch(err=>console.error(err));
+}
+
+deleteKitten();
