@@ -12,19 +12,27 @@
 </head>
 
 <body>
+    <style>
+        body {
+            background-image: url('./download.jfif');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
     <section>
         <form id="kittensForm">
-            <label for="kittenName">Name</label>
-            <input type="text" name="kittenName" id="kittenName">
+            <label>Name</label>
+            <input type="text" name="kittenName" id="kittenName" placeholder="Kitten Name" required>
             <br>
-            <label for="kittenAge">Age</label>
-            <input type="text" name="kittenAge" id="kittenAge">
+            <label>Age</label>
+            <input type="text" name="kittenAge" id="kittenAge"placeholder="Kitten Age" required>
             <br>
-            <label for="kittenBreed">Breed</label>
-            <input type="text" name="kittenBreed" id="kittenBreed">
+            <label>Breed</label>
+            <input type="text" name="kittenBreed" id="kittenBreed" placeholder="Kitten Breed" required>
             <br>
-            <label for="kittenCuteness">Cuteness</label>
-            <input type="text" name="kittenCuteness" id="kittenCuteness">
+            <label>Cuteness</label>
+            <input type="text" name="kittenCuteness" id="kittenCuteness"placeholder="How cute is your kitten?" required>
             <br>
             <button type="reset">Reset</button>
             <button type="submit">Submit</button>
