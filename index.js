@@ -35,6 +35,18 @@ function renderKittens() {
                 kittenName.innerText = kitten.name;
                 kittenDiv.appendChild(kittenName);
 
+                const kittenAge = document.createElement("li");
+                kittenAge.innerText = "Age: " + kitten.age;
+                kittenDiv.appendChild(kittenAge);
+
+                const kittenBreed = document.createElement("li");
+                kittenBreed.innerText = "Breed: " + kitten.breed;
+                kittenDiv.appendChild(kittenBreed);
+            
+                const kittenCuteness = document.createElement("li");
+                kittenCuteness.innerText = "Cuteness: " + kitten.cuteness;
+                kittenDiv.appendChild(kittenCuteness);
+    
                 output.appendChild(kittenDiv);
             }
         })
