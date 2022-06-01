@@ -1,7 +1,8 @@
 "use strict";
-
+//used to output data to webpage via html tag
 const output = document.getElementById("output");
 
+//this is where we create our objects via eventlistener of form and .post to api
 document.getElementById('kittensForm').addEventListener("submit", function (event) {
     event.preventDefault();
 
@@ -25,6 +26,7 @@ document.getElementById('kittensForm').addEventListener("submit", function (even
     console.log("KITTEN: ", kitten);
 });
 
+// create a function that lets us render data onto webpage using for loop
 function renderKittens() {
     axios.get("http://localhost:4494/kitten/getAll")
         .then(res => {
@@ -61,6 +63,7 @@ function renderKittens() {
         .catch(err => console.error(err));
 }
 
+//create a delete function via api .delete and render results again
 function deleteKitten(id) {
     axios.delete("http://localhost:4494/kitten/remove/" + id)
     .then(res=> {
