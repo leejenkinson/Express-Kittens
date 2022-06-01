@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express Kittens</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+        integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <section>
+        <form id="kittensForm">
+            <label for="kittenName">Name</label>
+            <input type="text" name="kittenName" id="kittenName">
+            <br>
+            <label for="kittenAge">Age</label>
+            <input type="text" name="kittenAge" id="kittenAge">
+            <br>
+            <label for="kittenBreed">Breed</label>
+            <input type="text" name="kittenBreed" id="kittenBreed">
+            <br>
+            <label for="kittenCuteness">Cuteness</label>
+            <input type="text" name="kittenCuteness" id="kittenCuteness">
+            <br>
+            <button type="reset">Reset</button>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    <div id="output"></div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
